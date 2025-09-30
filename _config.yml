@@ -1,0 +1,7 @@
+# title: The name of the even
+# # logo: /assets/img/profile.jpeg
+# description: A very sort description to the event
+show_menu: true
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-minimal
