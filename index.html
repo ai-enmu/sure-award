@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENMU AI Research Awareness Conference 2026</title>
+  <style>
+    /* --- creating horizontal line --- */
+    hr {
+      border: 0;
+      height: 2px;
+      background: #00e5ff; /* line color */
+      width: 800px;          /* line width */
+      margin: 10px auto 30px; /* spacing: top, auto-center, bottom */
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
+        padding: 20px 0;
+        border-top: 1px solid #ddd;
+        background-color: #fafafa;
+        position: relative;
+    }
+    footer a {
+        color: #00e5ff;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    .expertise-box {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 8px;
+        width: fit-content;
+        max-width: 600px;
+        text-align: left; /* align text to left */
+        margin-top: 20px;
+    }
+
+
+    /* --- General Page Styling --- */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      scroll-behavior: smooth;
+      color: #333;
+      background-color: white;
+    }
+
+    h1, h2 {
+      color: #004080;
+    }
+
+    /* --- Navigation Bar --- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 4px;
+    }
+
+    nav a:hover, nav a.active {
+      color: #00e5ff;
+      border-bottom: 2px solid #00e5ff;
+    }
+
+    /* --- Section Styling --- */
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      background-color: white;
+    }
+
+    /* --- Dark Hero (Home) Section --- */
+    #home {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                  url('img/hero.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    #home h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #00e5ff;
+    }
+
+    #home p {
+      font-size: 1.2em;
+      color: #eee;
+    }
+
+    /* --- Countdown Timer --- */
+    .countdown {
+      margin-top: 40px;
+      font-size: 1.3em;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px 25px;
+      border-radius: 10px;
+      min-width: 90px;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #00e5ff;
+      text-shadow: 0 0 10px rgba(0,229,255,0.6);
+    }
+
+    /* --- Organizing Committee Section --- */
+    #committee {
+      text-align: center; /* place title on the center*/
+    }
+
+    #committee .committee-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .member {
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .member img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .member .expertise {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      width: fit-content;
+      max-width: 280px;
+      margin: 10px auto 0;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    /* --- Speakers Section --- */
+    #speakers {
+      text-align: center;
+    }
+
+    .speaker-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .speaker {
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .speaker img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .speaker .expertise {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      width: fit-content;
+      max-width: 280px;
+      margin: 10px auto 0;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    /* --- Schedule Section --- */
+    #schedule {
+      background-color: white;
+      text-align: center;
+    }
+
+    /* --- Location Section --- */
+    #location {
+      background-color: white;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    /* --- Contact Section --- */
+    #contact {
+      background-color: white;
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+
+    /* --- Back to Top Link --- */
+    .top-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .top-link a {
+      color: #004080;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .speaker-grid, .committee-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu - Navigation -->
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#committee">Organizing Committee</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <h1>AI Research Awareness Conference 2026</h1>
+    <p>Bringing together distinguished AI experts from academia and industry.<br>March 12–14, 2026 | Portales, NM</p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+      <div class="time-box"><span id="days">00</span>Days</div>
+      <div class="time-box"><span id="hours">00</span>Hours</div>
+      <div class="time-box"><span id="minutes">00</span>Minutes</div>
+      <div class="time-box"><span id="seconds">00</span>Seconds</div>
+    </div>
+  </section>
+
+  <!-- Organizing Committee -->
+  <section id="committee">
+    <h2>Organizing Committee</h2>
+    <hr>
+    <div class="committee-grid">
+      <div class="member">
+        <img src="img/eduardo.jpeg" alt="Dr. Edgar Ceh-Varela" width="200" height="200" style="border-radius: 50%;"> <br>
+        <strong>Edgar Ceh-Varela</strong><br>
+        Eastern New Mexico University<br>
+        <a href="http://eduardocehvarela.github.io" target="_blank">Website</a> |
+        <a href="mailto:eduardo.ceh@enmu.edu">Email</a> |
+        <a href="tel:+15055551234">Phone</a>
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          Ph.D., New Mexico State University<br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          Applied Machine Learning, Data Mining, Natural Language Processing (NLP), Agentic AI
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="img/essa.jpeg" alt="Dr. Essa Imhmed" width="200" height="200" style="border-radius: 50%;"> <br>
+        <strong>Essa Imhmed</strong><br>
+        Eastern New Mexico University<br>
+        <a href="https://imhmede.github.io" target="_blank">Website</a> |
+        <a href="mailto:essa.imhmed@enmu.edu">Email</a> |
+        <a href="tel:+15055551234">Phone</a>
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          Ph.D., New Mexico State University<br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          CS Education, Agile in Engineering Education, Software Quality Assurance, Memory System, Performance Evaluation
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="img/shakya.jpeg" alt="Dr. Sarbagya Shakya" width="200" height="200" style="border-radius: 50%;"> <br>
+        <strong>Sarbagya Shakya</strong><br>
+        Eastern New Mexico University<br>
+        <a href="https://sites.google.com/view/sarbagyashakya/home" target="_blank">Website</a> |
+        <a href="mailto:Sarbagya.Shakya@enmu.edu">Email</a> |
+        <a href="tel:+15055551234">Phone</a>
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          Ph.D., University of Southern Mississippi<br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          machine learning, deep learning, high-performance computing, Internet of Things(IoT), Industrial Internet of things(IIoT), and TinyML
+        </div>
+      </div>
+    </div>
+    <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+  <!-- Speakers -->
+  <section id="speakers">
+    <h2>Speakers</h2>
+    <hr>
+    <div class="speaker-grid">
+      <div class="speaker">
+        <img src="img/huiping.jpg" alt="Dr. Huiping portrait" width="200" height="200" style="border-radius: 50%;"><br>
+        <strong>Dr. Huiping Cao</strong><br>
+        New Mexico State Universiy <br>
+        <a href="http://www.cs.nmsu.edu/~hcao" target="_blank">Website</a> |
+        <a href="mailto:jcook@example.com">Email</a> |
+        <a href="tel:+15055551234">Phone</a>
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          Ph.D., The University of Hong Kong<br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          Databases, Deep learning, Data mining, Time series analysis, Data integration,  Graph mining and query, Probabilistic models, Machine learning
+        </div>
+      </div>
+
+      <div class="speaker">
+        <img src="img/cook.jpg" alt="Dr. Jonathan Cook portrait" width="200" height="200" style="border-radius: 50%;"><br>
+        <strong>Jonathan Cook</strong><br>
+        New Mexico State Universiy <br>
+        <a href="https://www.cs.nmsu.edu/~jcook/" target="_blank">Website</a> |
+        <a href="mailto:jcook@example.com">Email</a> |
+        <a href="tel:+15055551234">Phone</a>
+        <div class="expertise-box">
+          <strong>Education</strong>:
+          Ph.D., University of Colorado at Boulder (1996)<br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          Software Process, Reliable Component-Based Systems, Software Engineering Environments, Large Software System Maintenance
+        </div>
+      </div>
+
+      <div class="speaker">
+        <img src="img/hamid.jpg" alt="Dr. Hamid Allamehzadeh" width="200" height="200" style="border-radius: 50%;"> <br>
+        <strong>Hamid Allamehzadeh</strong><br>
+        Eastern New Mexico University<br>
+        <a href="http://www.cs.nmsu.edu/~hcao" target="_blank">Website</a> |
+        <a href="mailto:jcook@example.com">Email</a> |
+        <a href="tel:+15055551234">Phone</a>
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          Ph.D., University of Oklahoma
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          Data Analysis, Predictive Modeling, Big Data
+        </div>
+      </div>
+    </div>
+    <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule">
+    <h2>Schedule</h2>
+    <p>
+      <strong>Day 1:</strong> Keynotes and Networking<br>
+      <strong>Day 2:</strong> Workshops and Panels<br>
+      <strong>Day 3:</strong> Startup Showcase and Closing Ceremony
+    </p>
+    <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+  <!-- Location -->
+  <section id="location">
+    <h2>Location</h2>
+    <p>
+      The conference will be held at The Jack Williamson Liberal Arts building, ENMU in Portales, NM.<br>
+      Below is an interactive map for directions.
+    </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1335.8989280745661!2d-103.35055876162977!3d34.17736900107064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8702c62e0827d4d7%3A0x405c991d8462e016!2sEastern%20New%20Mexico%20University!5e0!3m2!1sen!2sus!4v1762741651307!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get in touch? Send us a message below!</p>
+    <form action="mailto:essa.imhmed@enmu.edu" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="credit-footer" data-owner="Essa Imhmed"></footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // --- Highlight Active Nav Link ---
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // --- Countdown Timer ---
+    const eventDate = new Date("March 12, 2026 09:00:00").getTime();
+
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        document.querySelector(".countdown").innerHTML = "🎉 The Event Has Started!";
+        clearInterval(countdown);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }, 1000);
+    
+    // Footer
+        document.addEventListener("DOMContentLoaded", () => {
+            const footer = document.getElementById("credit-footer");
+            const siteOwner = footer?.dataset.owner || "Site Owner";
+            const year = new Date().getFullYear();
+            const githubRepo = "https://github.com/imhmede/minimal";
+
+            footer.innerHTML = 
+                `© ${year} ${siteOwner} — Based on <a href="${githubRepo}" target="_blank">Minimal theme</a> by imhmede`;
+        });
+  </script>
+</body>
+</html>
