@@ -176,7 +176,7 @@
     }
 
     /* --- Speakers Section --- */
-    #speakers {
+    #experts {
       text-align: center;
     }
 
@@ -211,8 +211,31 @@
       font-size: 0.9em;
     }
 
+    /* --- About Section --- */
+    #about {
+      background-color: white;
+      text-align: center;
+    }
+
+     .expertise-box {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 8px;
+        width: fit-content;
+        max-width: 600px;
+        text-align: left; /* align text to left */
+        margin-top: 20px;
+        margin: 20px auto;
+    }
+
     /* --- Schedule Section --- */
     #schedule {
+      background-color: white;
+      text-align: center;
+    }
+
+    /* --- Registration Section --- */
+    #registration {
       background-color: white;
       text-align: center;
     }
@@ -263,6 +286,22 @@
       background-color: #003366;
     }
 
+    /* --- Header Logos --- */
+    .header-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .header-logos img {
+      max-height: 120px;
+      width: auto;
+      object-fit: contain;
+    }
+
     /* --- Back to Top Link --- */
     .top-link {
       text-align: center;
@@ -290,17 +329,26 @@
   <!-- Menu - Navigation -->
   <nav>
     <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
     <a href="#committee">Organizing Committee</a>
-    <a href="#speakers">Speakers</a>
+    <a href="#experts">Experts</a>
     <a href="#schedule">Schedule</a>
+    <a href="#registration">Registration</a>
     <a href="#location">Location</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <!-- Home -->
   <section id="home">
-    <h1>AI Research Awareness Conference 2026</h1>
-    <p>Bringing together distinguished AI experts from academia and industry.<br>March 12–14, 2026 | Portales, NM</p>
+
+    <!-- Header Logos -->
+    <div class="header-logos">
+      <img src="img/math_logo.png" alt="CS Logo">
+      <img src="img/epscor_logo.png" alt="ESPCOR Logo">
+    </div>
+
+    <h1>Research Awareness in Artificial Intelligence</h1>
+    <p>Bringing together AI experts and students.<br>March 21, 2026 | Portales, NM</p>
 
     <!-- Countdown Timer -->
     <div class="countdown">
@@ -311,22 +359,47 @@
     </div>
   </section>
 
+  <!-- About Section-->
+  <section id="about">
+    <h2>About this event</h2>
+    <div class="expertise-box">
+      <p>
+        The event on <strong>"Research Awareness in Artificial Intelligence"</strong> is aimed only for currently enrolled <strong>Mathematical Sciences</strong> (i.e., Math, CS, EET) undergraduate students and will feature:
+      </p>
+      <ul>
+        <li><strong>AI Experts:</strong> Guest speakers from academia will present on emerging AI trends, ethical considerations, and real-world applications.</li>
+        <li><strong>Hands-On AI Workshop:</strong> Students will gain practical experience in AI methodologies, fostering skills that are crucial for both research and industry careers.</li>
+        <li><strong>Networking and Mentorship:</strong> The conference will create valuable opportunities for students to engage with AI professionals, faculty, and peers, encouraging future collaborations and career development.</li>
+        <li><strong>Virtual Attendance Option:</strong> To ensure inclusivity and accessibility, the event will be livestreamed for remote students , allowing them to participate in the activities. </li>
+      </ul>
+
+      <p>If you live in more than <strong>200 miles</strong> radius from ENMU, we have <strong>10, $500</strong> travel grants, to attend to this event.</p>
+
+      <p>This event is sponsored by <a href="https://www.nmepscor.org/news-and-events/news/rio-nm-names-sure-awardees-and-releases-rfp-fall" target="_blank">NM EPSCoR SURE program</a>.</p>
+   </div>
+
+   <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+
   <!-- Organizing Committee -->
   <section id="committee">
     <h2>Organizing Committee</h2>
     <hr>
     <div class="committee-grid">
       <div class="member">
-        <img src="img/eduardo.jpeg" alt="Dr. Edgar Ceh-Varela" width="200" height="200" style="border-radius: 50%;"> <br>
-        <strong>Edgar Ceh-Varela</strong><br>
+        <img src="img/eduardo_2.png" alt="Dr. Edgar Ceh-Varela" width="200" height="200" style="border-radius: 50%;"> <br>
+        <strong>Edgar Ceh-Varela, Ph.D,</strong><br>
+        Assistant Professor of Computer Science<br><br>
         Eastern New Mexico University<br>
-        <a href="http://eduardocehvarela.github.io" target="_blank">Website</a> |
-        <a href="mailto:eduardo.ceh@enmu.edu">Email</a> |
-        <a href="tel:+15055551234">Phone</a>
-        <div class="expertise-box">
+        <a href="http://eduardocehvarela.github.io" target="_blank">Website</a>
+        <!-- <a href="mailto:eduardo.ceh@enmu.edu">Email</a> -->
+         
+        <!-- <a href="tel:+15055551234">Phone</a> -->
+        <!-- <div class="expertise-box">
           <strong>Education</strong>: 
           Ph.D., New Mexico State University<br>
-        </div>
+        </div> -->
         <div class="expertise-box">
           <strong>Expertise</strong>: 
           Applied Machine Learning, Data Mining, Natural Language Processing (NLP), Agentic AI
@@ -335,47 +408,50 @@
 
       <div class="member">
         <img src="img/essa.jpeg" alt="Dr. Essa Imhmed" width="200" height="200" style="border-radius: 50%;"> <br>
-        <strong>Essa Imhmed</strong><br>
+        <strong>Essa Imhmed, Ph.D.</strong><br>
+        Assistant Professor of Computer Science<br><br>
         Eastern New Mexico University<br>
-        <a href="https://imhmede.github.io" target="_blank">Website</a> |
-        <a href="mailto:essa.imhmed@enmu.edu">Email</a> |
-        <a href="tel:+15055551234">Phone</a>
-        <div class="expertise-box">
+        <a href="https://imhmede.github.io" target="_blank">Website</a>
+        <!-- <a href="mailto:essa.imhmed@enmu.edu">Email</a> -->
+        <!-- <a href="tel:+15055551234">Phone</a> -->
+        <!-- <div class="expertise-box">
           <strong>Education</strong>: 
           Ph.D., New Mexico State University<br>
-        </div>
+        </div> -->
         <div class="expertise-box">
           <strong>Expertise</strong>: 
           CS Education, Agile in Engineering Education, Software Quality Assurance, Memory System, Performance Evaluation
         </div>
       </div>
 
+
       <div class="member">
         <img src="img/shakya.jpeg" alt="Dr. Sarbagya Shakya" width="200" height="200" style="border-radius: 50%;"> <br>
-        <strong>Sarbagya Shakya</strong><br>
+        <strong>Sarbagya Shakya, Ph.D.</strong><br>
+        Assistant Professor of Electronic Engineering Technology<br>
         Eastern New Mexico University<br>
-        <a href="https://sites.google.com/view/sarbagyashakya/home" target="_blank">Website</a> |
-        <a href="mailto:Sarbagya.Shakya@enmu.edu">Email</a> |
-        <a href="tel:+15055551234">Phone</a>
-        <div class="expertise-box">
+        <a href="https://sites.google.com/view/sarbagyashakya/home" target="_blank">Website</a>
+        <!-- <a href="mailto:Sarbagya.Shakya@enmu.edu">Email</a> -->
+        <!-- <a href="tel:+15055551234">Phone</a> -->
+        <!-- <div class="expertise-box">
           <strong>Education</strong>: 
           Ph.D., University of Southern Mississippi<br>
-        </div>
+        </div> -->
         <div class="expertise-box">
           <strong>Expertise</strong>: 
-          machine learning, deep learning, high-performance computing, Internet of Things(IoT), Industrial Internet of things(IIoT), and TinyML
+          Machine Learning, Deep Learning, HPC, Internet of Things(IoT), Industrial Internet of things(IIoT), and TinyML
         </div>
       </div>
     </div>
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
 
-  <!-- Speakers -->
-  <section id="speakers">
-    <h2>Speakers</h2>
+  <!-- Experts -->
+  <section id="experts">
+    <h2>Experts</h2>
     <hr>
     <div class="speaker-grid">
-      <div class="speaker">
+      <!--div class="speaker">
         <img src="img/huiping.jpg" alt="Dr. Huiping portrait" width="200" height="200" style="border-radius: 50%;"><br>
         <strong>Dr. Huiping Cao</strong><br>
         New Mexico State Universiy <br>
@@ -390,40 +466,76 @@
           <strong>Expertise</strong>: 
           Databases, Deep learning, Data mining, Time series analysis, Data integration,  Graph mining and query, Probabilistic models, Machine learning
         </div>
-      </div>
-
+      </div> -->
       <div class="speaker">
-        <img src="img/cook.jpg" alt="Dr. Jonathan Cook portrait" width="200" height="200" style="border-radius: 50%;"><br>
-        <strong>Jonathan Cook</strong><br>
-        New Mexico State Universiy <br>
-        <a href="https://www.cs.nmsu.edu/~jcook/" target="_blank">Website</a> |
-        <a href="mailto:jcook@example.com">Email</a> |
-        <a href="tel:+15055551234">Phone</a>
-        <div class="expertise-box">
-          <strong>Education</strong>:
-          Ph.D., University of Colorado at Boulder (1996)<br>
-        </div>
-        <div class="expertise-box">
-          <strong>Expertise</strong>: 
-          Software Process, Reliable Component-Based Systems, Software Engineering Environments, Large Software System Maintenance
-        </div>
-      </div>
-
-      <div class="speaker">
-        <img src="img/hamid.jpg" alt="Dr. Hamid Allamehzadeh" width="200" height="200" style="border-radius: 50%;"> <br>
-        <strong>Hamid Allamehzadeh</strong><br>
-        Eastern New Mexico University<br>
-        <a href="http://www.cs.nmsu.edu/~hcao" target="_blank">Website</a> |
-        <a href="mailto:jcook@example.com">Email</a> |
-        <a href="tel:+15055551234">Phone</a>
+        <img src="img/profile.jpg" alt="speaker portrait" width="200" height="200" style="border-radius: 50%;"><br>
+        <strong>Speaker</strong><br>
+        Institution <br>
+        <a href=# target="_blank">Website</a>
+        <!-- <a href="mailto:jcook@example.com">Email</a> | -->
+        <!-- <a href="tel:+15055551234">Phone</a> -->
         <div class="expertise-box">
           <strong>Education</strong>: 
-          Ph.D., University of Oklahoma
+          <br>
         </div>
         <div class="expertise-box">
           <strong>Expertise</strong>: 
-          Data Analysis, Predictive Modeling, Big Data
+          <!-- Databases, Deep learning, Data mining, Time series analysis, Data integration,  Graph mining and query, Probabilistic models, Machine learning -->
         </div>
+      </div>
+
+      <div class="speaker">
+        <img src="img/profile.jpg" alt="speaker portrait" width="200" height="200" style="border-radius: 50%;"><br>
+        <strong>Speaker</strong><br>
+        Institution <br>
+        <a href=# target="_blank">Website</a>
+        <!-- <a href="mailto:jcook@example.com">Email</a> | -->
+        <!-- <a href="tel:+15055551234">Phone</a> -->
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          <br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          <!-- Databases, Deep learning, Data mining, Time series analysis, Data integration,  Graph mining and query, Probabilistic models, Machine learning -->
+        </div>
+      </div>
+
+      
+      <div class="speaker">
+        <img src="img/profile.jpg" alt="speaker portrait" width="200" height="200" style="border-radius: 50%;"><br>
+        <strong>Speaker</strong><br>
+        Institution <br>
+        <a href=# target="_blank">Website</a>
+        <!-- <a href="mailto:jcook@example.com">Email</a> | -->
+        <!-- <a href="tel:+15055551234">Phone</a> -->
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          <br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          <!-- Databases, Deep learning, Data mining, Time series analysis, Data integration,  Graph mining and query, Probabilistic models, Machine learning -->
+        </div>
+      </div>
+
+      <div class="speaker">
+        <img src="img/profile.jpg" alt="speaker portrait" width="200" height="200" style="border-radius: 50%;"><br>
+        <strong>Speaker</strong><br>
+        Institution <br>
+        <a href=# target="_blank">Website</a>
+        <!-- <a href="mailto:jcook@example.com">Email</a> | -->
+        <!-- <a href="tel:+15055551234">Phone</a> -->
+        <div class="expertise-box">
+          <strong>Education</strong>: 
+          <br>
+        </div>
+        <div class="expertise-box">
+          <strong>Expertise</strong>: 
+          <!-- Databases, Deep learning, Data mining, Time series analysis, Data integration,  Graph mining and query, Probabilistic models, Machine learning -->
+        </div>
+      </div>
+      
       </div>
     </div>
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
@@ -433,10 +545,24 @@
   <section id="schedule">
     <h2>Schedule</h2>
     <p>
-      <strong>Day 1:</strong> Keynotes and Networking<br>
-      <strong>Day 2:</strong> Workshops and Panels<br>
-      <strong>Day 3:</strong> Startup Showcase and Closing Ceremony
+      <strong>8:00 a.m.- 8:45 a.m.:</strong> Registration<br>
+      <strong>9:00 a.m.- 9:50 a.m.:</strong> Talk # 1<br>
+      <strong>10:00 a.m.- 10:50 a.m.:</strong> Talk # 2<br>
+      <strong>11:00 a.m.- 11:50 a.m.:</strong> Talk # 3<br>
+      <strong>12:00 p.m.- 1:15 p.m.:</strong> Luch break at the cafeteria<br>
+      <strong>1:30 a.m.- 2:30 a.m.:</strong> Hands-On Workshop<br>
+      <strong>2:45 p.m. - 3:30 p.m.</strong> Panel with experts<br>
+      <strong>3:30 p.m. - 3:45 p.m.</strong> Closure
     </p>
+    <div class="top-link"><a href="#home">⬆ Back to top</a></div>
+  </section>
+
+  <!-- Registration -->
+  <section id="registration">
+    <h2>Registration</h2>
+    <p>Register now to secure your spot at the conference!</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKZiqS42MJph2tfsTIiXUnSqLBbZ169gfGzzA7F-FYSCd1bw/viewform?usp=publish-editor" target="_blank">Register Here</a>
+
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
 
@@ -454,13 +580,17 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Have questions or want to get in touch? Send us a message below!</p>
-    <form action="mailto:essa.imhmed@enmu.edu" method="POST" enctype="text/plain">
+    <p>Have questions or want to get in touch? Send us a message!</p>
+    <!-- <form action="mailto:essa.imhmed@enmu.edu" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>
-    </form>
+    </form> -->
+    eduardo[dot]ceh[at]enmu[dot]edu, essa[dot]imhmed[at]enmu[dot]edu, sarbagya[dot]shakya[at]enmu[dot]edu
+    
+
+
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
 
@@ -492,7 +622,7 @@
     });
 
     // --- Countdown Timer ---
-    const eventDate = new Date("March 12, 2026 09:00:00").getTime();
+    const eventDate = new Date("March 21, 2026 09:00:00").getTime();
 
     const countdown = setInterval(() => {
       const now = new Date().getTime();
