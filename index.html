@@ -228,6 +228,18 @@
         margin: 20px auto;
     }
 
+    .info-box {
+        background-color: #f0f0f0;
+        padding: 15px;
+        font-size: large;
+        border-radius: 8px;
+        width: fit-content;
+        max-width: 600px;
+        text-align: left; /* align text to left */
+        margin-top: 20px;
+        margin: 20px auto;
+    }
+
     /* --- Schedule Section --- */
     #schedule {
       background-color: white;
@@ -362,7 +374,7 @@
   <!-- About Section-->
   <section id="about">
     <h2>About this event</h2>
-    <div class="expertise-box">
+    <div class="info-box">
       <p>
         The event on <strong>"Research Awareness in Artificial Intelligence"</strong> is aimed only for currently enrolled <strong>Mathematical Sciences</strong> (i.e., Math, CS, EET) undergraduate students and will feature:
       </p>
@@ -373,7 +385,9 @@
         <li><strong>Virtual Attendance Option:</strong> To ensure inclusivity and accessibility, the event will be livestreamed for remote students , allowing them to participate in the activities. </li>
       </ul>
 
-      <p>If you live in more than <strong>200 miles</strong> radius from ENMU, we have <strong>10, $500</strong> travel grants, to attend to this event.</p>
+      <p>If you live in more than <strong>200 miles</strong> radius from ENMU, we have <strong>10, $500</strong> travel grants, to attend to this event. 
+        (Review the requirements)
+      </p> 
 
       <p>This event is sponsored by <a href="https://www.nmepscor.org/news-and-events/news/rio-nm-names-sure-awardees-and-releases-rfp-fall" target="_blank">NM EPSCoR SURE program</a>.</p>
    </div>
@@ -542,37 +556,47 @@
   </section>
 
   <!-- Schedule -->
-  <section id="schedule">
+  <section id="schedule" >
     <h2>Schedule</h2>
-    <p>
+    <div class="info-box">
       <strong>8:00 a.m.- 8:45 a.m.:</strong> Registration<br>
-      <strong>9:00 a.m.- 9:50 a.m.:</strong> Talk # 1<br>
-      <strong>10:00 a.m.- 10:50 a.m.:</strong> Talk # 2<br>
-      <strong>11:00 a.m.- 11:50 a.m.:</strong> Talk # 3<br>
-      <strong>12:00 p.m.- 1:15 p.m.:</strong> Luch break at the cafeteria<br>
-      <strong>1:30 a.m.- 2:30 a.m.:</strong> Hands-On Workshop<br>
-      <strong>2:45 p.m. - 3:30 p.m.</strong> Panel with experts<br>
-      <strong>3:30 p.m. - 3:45 p.m.</strong> Closure
-    </p>
+        <strong>9:00 a.m.- 9:50 a.m.:</strong> Talk # 1<br>
+        <strong>10:00 a.m.- 10:50 a.m.:</strong> Talk # 2<br>
+        <strong>11:00 a.m.- 11:50 a.m.:</strong> Talk # 3<br>
+        <strong>12:00 p.m.- 1:15 p.m.:</strong> Luch break at the cafeteria (provided)<br>
+        <strong>1:30 a.m.- 2:30 a.m.:</strong> Hands-On Workshop<br>
+        <strong>2:45 p.m. - 3:30 p.m.</strong> Panel with experts<br>
+        <strong>3:30 p.m. - 3:45 p.m.</strong> Event closure  
+    </div>
+
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
 
   <!-- Registration -->
   <section id="registration">
     <h2>Registration</h2>
-    <p>Register now to secure your spot at the conference!</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKZiqS42MJph2tfsTIiXUnSqLBbZ169gfGzzA7F-FYSCd1bw/viewform?usp=publish-editor" target="_blank">Register Here</a>
+    <div class="info-box">
+      <p>Register now to secure your spot at the conference!</p>
+      <p style="text-align: center;">Limited spots available</p>
+      <p style="text-align: center;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKZiqS42MJph2tfsTIiXUnSqLBbZ169gfGzzA7F-FYSCd1bw/viewform?usp=publish-editor" target="_blank">Register Here</a>
+      </p>
 
+    </div>
+    
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
 
   <!-- Location -->
   <section id="location">
     <h2>Location</h2>
-    <p>
+    <div class="info-box">
+      <p style="text-align: center;">
       The conference will be held at The Jack Williamson Liberal Arts building, ENMU in Portales, NM.<br>
       Below is an interactive map for directions.
     </p>
+    </div>
+    
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1335.8989280745661!2d-103.35055876162977!3d34.17736900107064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8702c62e0827d4d7%3A0x405c991d8462e016!2sEastern%20New%20Mexico%20University!5e0!3m2!1sen!2sus!4v1762741651307!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
@@ -580,16 +604,16 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Have questions or want to get in touch? Send us a message!</p>
+    <div class="info-box">
+      <p style="text-align: center;">Have questions or want to get in touch? Send us a message!</p>
     <!-- <form action="mailto:essa.imhmed@enmu.edu" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Message" rows="4" required></textarea>
       <button type="submit">Send Message</button>
     </form> -->
-    eduardo[dot]ceh[at]enmu[dot]edu, essa[dot]imhmed[at]enmu[dot]edu, sarbagya[dot]shakya[at]enmu[dot]edu
-    
-
+    <p style="text-align: center;">eduardo.ceh@enmu.edu, <br>essa.imhmed@enmu.edu, <br>sarbagya.shakya@enmu.edu</p>
+    </div>
 
     <div class="top-link"><a href="#home">⬆ Back to top</a></div>
   </section>
